@@ -392,7 +392,7 @@ footer {
 /* Home Page Styles */
 /* Who We Are Section */
 .who-we-are {
-  padding: 5rem 0;
+  padding: 5rem 0 2rem; /* Reduced bottom padding */
   background: var(--gray-100);
 }
 
@@ -434,9 +434,9 @@ footer {
 
 /* Services Grid */
 .services-section {
-  padding: 5rem 0;
+  padding: 2rem 0 5rem; /* Reduced top padding */
   background: var(--gray-100);
-  margin-top: 100px; /* Add back margin for services page */
+  margin-top: 0;
 }
 
 .services-intro {

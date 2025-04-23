@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dropdown.css">
 </head>
 <body>
     <header class="header">
@@ -14,16 +15,32 @@
             <div class="hero-overlay"></div>
             <div class="container">
                 <nav class="nav-container">
-                    <a href="/" class="logo">
+                    <a href="index.html" class="logo">
                         <img src="images/logo.svg" alt="Lee's Ceramics" width="150" height="150" />
                     </a>
                     <ul class="nav-menu">
-                        <li><a href="#" class="nav-link">About</a></li>
-                        <li><a href="#" class="nav-link">Services</a></li>
-                        <li><a href="#" class="nav-link">Commercial</a></li>
-                        <li><a href="#" class="nav-link">Showcase</a></li>
-                        <li><a href="#" class="nav-link">Contact</a></li>
-                        <li><a href="https://instagram.com" class="social-icon" target="_blank" aria-label="Visit our Instagram"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link active">About</a></li>
+                        <li>
+                            <a href="services.html" class="nav-link has-dropdown">Services</a>
+                            <div class="dropdown">
+                                <a href="large-format-tile.html">Large Format Tile</a>
+                                <a href="minor-tile-damage-repair.html">Tile Damage Repair</a>
+                                <a href="mosaic-repair.html">Porcelain/Ceramic Tile Installation</a>
+                                <a href="seamless-flooring.html">Seamless Flooring</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="commercial.html" class="nav-link has-dropdown">Commercial</a>
+                            <div class="dropdown">
+                                <a href="marble-tile-installation.html">Marble Tile Installation</a>
+                                <a href="commercial-tile.html">Commercial Tile</a>
+                                <a href="commercial-mosaic.html">Commercial Mosaic</a>
+                            </div>
+                        </li>
+                        <li><a href="showcase.html" class="nav-link">Showcase</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                        <li><a href="https://www.instagram.com/lees_ceramics/" class="social-icon" target="_blank" aria-label="Visit our Instagram"><i class="fab fa-instagram"></i></a></li>
                     </ul>
                 </nav>
                 <div class="hero-grid">
@@ -46,10 +63,14 @@
                 <h2>Our Team</h2>
                 <div class="team-grid">
                     <div class="team-member">
-                        <div class="placeholder-image"></div>
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80" alt="Installation Team" class="team-image">
+                        <h3>Installation Team</h3>
+                        <p>Our expert craftsmen bring decades of experience to every project</p>
                     </div>
                     <div class="team-member">
-                        <div class="placeholder-image"></div>
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Design Team" class="team-image">
+                        <h3>Design & Management Team</h3>
+                        <p>Guiding your project from concept to completion</p>
                     </div>
                 </div>
             </div>
@@ -106,7 +127,7 @@
     <footer>
         <div class="footer-content">
             <div class="contact-info-footer">
-                <a href="/" class="logo-footer">
+                <a href="index.html" class="logo-footer">
                     <img src="images/logo.svg" alt="Lee's Ceramics" width="100" height="100" />
                 </a>
                 <h3>Get In Touch</h3>
@@ -114,7 +135,7 @@
                 <p><i class="fas fa-envelope"></i><a href="mailto:leesceramicsinc@outlook.com" class="contact-phone"> leesceramicsinc@outlook.com</a></p>
                 <p><i class="fas fa-map-marker-alt"></i> Edina, Minnesota</p>
                 <div class="social-icons-large">
-                    <a href="https://instagram.com" class="social-icon-large" target="_blank" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/lees_ceramics/" class="social-icon-large" target="_blank" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div class="footer-section">

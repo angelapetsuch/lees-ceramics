@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dropdown.css">
 </head>
 <body>
     <header class="header">
@@ -15,16 +16,32 @@
             <div class="hero-overlay"></div>
             <div class="container">
                 <nav class="nav-container">
-                    <a href="/" class="logo">
+                    <a href="index.html" class="logo">
                         <img src="images/logo.svg" alt="Lee's Ceramics" width="150" height="150" />
                     </a>
                     <ul class="nav-menu">
-                        <li><a href="#" class="nav-link">About</a></li>
-                        <li><a href="#" class="nav-link">Services</a></li>
-                        <li><a href="#" class="nav-link">Commercial</a></li>
-                        <li><a href="#" class="nav-link">Showcase</a></li>
-                        <li><a href="#" class="nav-link">Contact</a></li>
-                        <li><a href="https://instagram.com" class="social-icon" target="_blank" aria-label="Visit our Instagram"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="index.html" class="nav-link active">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li>
+                            <a href="services.html" class="nav-link has-dropdown">Services</a>
+                            <div class="dropdown">
+                                <a href="large-format-tile.html">Large Format Tile</a>
+                                <a href="minor-tile-damage-repair.html">Tile Damage Repair</a>
+                                <a href="mosaic-repair.html">Porcelain/Ceramic Tile Installation</a>
+                                <a href="seamless-flooring.html">Seamless Flooring</a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="commercial.html" class="nav-link has-dropdown">Commercial</a>
+                            <div class="dropdown">
+                                <a href="marble-tile-installation.html">Marble Tile Installation</a>
+                                <a href="commercial-tile.html">Commercial Tile</a>
+                                <a href="commercial-mosaic.html">Commercial Mosaic</a>
+                            </div>
+                        </li>
+                        <li><a href="showcase.html" class="nav-link">Showcase</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                        <li><a href="https://www.instagram.com/lees_ceramics/" class="social-icon" target="_blank" aria-label="Visit our Instagram"><i class="fab fa-instagram"></i></a></li>
                     </ul>
                 </nav>
                 <div class="hero-grid">
@@ -46,7 +63,7 @@
                             </div>
                         </div>
                         <div class="hero-cta">
-                            <a href="#contact" class="btn btn-primary">Start Your Project</a>
+                            <a href="contact.html" class="btn btn-primary">Start Your Project</a>
                             <a href="#services" class="btn btn-secondary">View Services</a>
                         </div>
                     </div>
@@ -86,7 +103,7 @@
         </div>
     </section>
 
-    <section class="services-section">
+    <section class="services-section" id="services">
         <div class="container">
             <div class="services-intro">
                 <h2 class="section-title">Our Expertise</h2>
@@ -101,43 +118,43 @@
                     <i class="fas fa-building service-icon"></i>
                     <h3 class="service-title">Commercial Tile</h3>
                     <p class="service-description">Expert installation for high-traffic commercial spaces, using premium materials and advanced techniques.</p>
-                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <a href="commercial-tile.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-gem service-icon"></i>
                     <h3 class="service-title">Marble Installation</h3>
                     <p class="service-description">Elevate your commercial space with our premium marble tile installation services.</p>
-                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <a href="marble-tile-installation.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-th service-icon"></i>
                     <h3 class="service-title">Commercial Mosaic</h3>
                     <p class="service-description">Create stunning visual impact with our custom mosaic designs for commercial spaces.</p>
-                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <a href="commercial-mosaic.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-expand service-icon"></i>
                     <h3 class="service-title">Large Format Tile</h3>
                     <p class="service-description">Specialized installation of large format tiles for modern, seamless appearances.</p>
-                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <a href="large-format-tile.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-tools service-icon"></i>
                     <h3 class="service-title">Tile Repair</h3>
                     <p class="service-description">Professional repair services to maintain the beauty and functionality of your tile installations.</p>
-                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <a href="minor-tile-damage-repair.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-layer-group service-icon"></i>
                     <h3 class="service-title">Seamless Flooring</h3>
                     <p class="service-description">High-performance flooring solutions for demanding commercial environments.</p>
-                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <a href="seamless-flooring.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-border-all service-icon"></i>
                     <h3 class="service-title">Porcelain & Ceramic Installation</h3>
                     <p class="service-description">Expert installation of porcelain and ceramic tiles for beautiful, long-lasting results.</p>
-                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <a href="mosaic-repair.html" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -148,7 +165,7 @@
             <h2 class="section-title" style="color: var(--white)">Contact Us</h2>
             <div class="homepage-contact-grid">
                 <div class="contact-info">
-                    <a href="/" class="logo-footer">
+                    <a href="index.html" class="logo-footer">
                         <img src="images/logo.svg" alt="Lee's Ceramics" width="100" height="100" />
                     </a>
                     <h3>Get In Touch</h3>
@@ -157,7 +174,7 @@
                     <p><i class="fas fa-envelope"></i> leesceramicsinc@outlook.com</p>
                     <p><i class="fas fa-map-marker-alt"></i> Edina, Minnesota</p>
                     <div class="social-icons-large">
-                        <a href="https://instagram.com" class="social-icon-large" target="_blank" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/lees_ceramics/" class="social-icon-large" target="_blank" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <form class="simple-contact-form">
@@ -170,5 +187,6 @@
         </div>
     </section>
     <script src="js/main.js"></script>
+    <script src="js/service-links.js"></script>
 </body>
 </html>
