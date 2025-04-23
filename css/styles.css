@@ -36,6 +36,50 @@ body {
   padding: 0 20px;
 }
 
+/* Dropdown Menu Styles */
+.nav-menu li {
+  position: relative;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  min-width: 200px;
+  z-index: 100;
+  border-radius: 4px;
+  padding: 0.5rem 0;
+}
+
+.nav-menu li:hover .dropdown {
+  display: block;
+}
+
+.dropdown a {
+  color: var(--gray-800);
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  display: block;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.dropdown a:hover {
+  background-color: var(--gray-100);
+  color: var(--sapphire);
+}
+
+.has-dropdown::after {
+  content: '\f107';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  margin-left: 5px;
+}
+
+
 /* Header & Navigation Index & About Page Styles */
 .header {
   width: 100%;
