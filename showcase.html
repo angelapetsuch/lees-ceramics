@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showcase - Lee's Ceramics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Showcase specific styles */
+        .showcase-hero {
+            background: linear-gradient(135deg, var(--sapphire) 0%, #1e40af 100%);
+            color: white;
+            padding: 8rem 0 4rem;
+            position: relative;
+        }
+        
+        .showcase-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0);
+            background-size: 40px 40px;
+            opacity: 0.3;
+        }
+        
+        .showcase-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .showcase-hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            text-align: center;
+            opacity: 0.9;
+        }
+        
+        .project-filter {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            background: transparent;
+            border: 2px solid var(--gray-200);
+            color: var(--gray-800);
+            padding: 0.75rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--sapphire);
+            border-color: var(--sapphire);
+            color: white;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        
+        .project-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            position: relative;
+            height: 350px;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .project-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+            padding: 2rem;
+            color: white;
+            transition: all 0.3s;
+        }
+        
+        .project-card:hover .project-overlay {
+            background: linear-gradient(to top, rgba(38, 99, 235, 0.9) 0%, rgba(38, 99, 235, 0.7) 50%, rgba(0,0,0,0) 100%);
+        }
+        
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-category {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 1rem;
+        }
+        
+        .project-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s;
+        }
+        
+        .project-card:hover .project-link {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .featured-project {
+            grid-column: span 2;
+            height: 450px;
+        }
+        
+        .featured-project .project-title {
+            font-size: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-project {
+                grid-column: span 1;
+                height: 350px;
+            }
+            
+            .showcase-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="service-page-wrapper">
+    <nav class="nav-container secondary">
+        <a href="index.html" class="logo">
+            <img src="images/logo.svg" alt="Lee's Ceramics" width="100" height="100" />
+        </a>
+        <ul class="nav-menu">
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="commercial.html" class="nav-link">Commercial</a></li>
+            <li><a href="showcase.html" class="nav-link active">Showcase</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li><a href="https://instagram.com" class="social-icon" target="_blank" aria-label="Visit our Instagram"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+    </nav>
+
+    <section class="showcase-hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <h1>Our Project Showcase</h1>
+            <p>Explore our portfolio of exceptional tile and stone installations across Minnesota and beyond. From luxury hotels to modern offices, we bring expertise to every project.</p>
+        </div>
+    </section>
+</div>
+    <main class="main">
+        <div class="container">
+            <div class="project-filter">
+                <button class="filter-btn active">All Projects</button>
+                <button class="filter-btn">Commercial</button>
+                <button class="filter-btn">Residential</button>
+                <button class="filter-btn">Large Format</button>
+                <button class="filter-btn">Mosaic</button>
+                <button class="filter-btn">Marble</button>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card featured-project" data-category="commercial">
+                    <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Luxury Hotel Bathroom" class="project-image">
+                    <div class="project-overlay">
+                        <div class="project-title">Luxury Hotel Bathroom</div>
+                        <div class="project-category">Commercial | Large Format Tile</div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="residential">
+                    <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Modern Kitchen Backsplash" class="project-image">
+                    <div class="project-overlay">
+                        <div class="project-title">Modern Kitchen Backsplash</div>
+                        <div class="project-category">Residential | Mosaic</div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="commercial">
+                    <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Corporate Office Lobby" class="project-image">
+                    <div class="project-overlay">
+                        <div class="project-title">Corporate Office Lobby</div>
+                        <div class="project-category">Commercial | Marble</div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="residential">
+                    <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Luxury Bathroom Renovation" class="project-image">
+                    <div class="project-overlay">
+                        <div class="project-title">Luxury Bathroom Renovation</div>
+                        <div class="project-category">Residential | Large Format</div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="commercial">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Restaurant Floor Installation" class="project-image">
+                    <div class="project-overlay">
+                        <div class="project-title">Restaurant Floor Installation</div>
+                        <div class="project-category">Commercial | Porcelain</div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-category="residential">
+                    <img src="https://images.unsplash.com/photo-1564540586988-aa4e53c3d799?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Custom Shower Installation" class="project-image">
+                    <div class="project-overlay">
+                        <div class="project-title">Custom Shower Installation</div>
+                        <div class="project-category">Residential | Ceramic</div>
+                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Let's create something beautiful together</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-solid">Contact Us</a>
+                    <a href="services.html" class="btn btn-outline">View Services</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info-footer">
+                <a href="/" class="logo-footer">
+                    <img src="images/logo.svg" alt="Lee's Ceramics" width="100" height="100" />
+                </a>
+                <h3>Get In Touch</h3>
+                <p><i class="fas fa-phone"></i><a href="tel:9524603707" class="contact-phone"> (952) 460-3707</a></p>
+                <p><i class="fas fa-envelope"></i><a href="mailto:leesceramicsinc@outlook.com" class="contact-phone"> leesceramicsinc@outlook.com</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> Edina, Minnesota</p>
+                <div class="social-icons-large">
+                    <a href="https://instagram.com" class="social-icon-large" target="_blank" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <a href="commercial.html">Commercial Tile</a>
+                <a href="residential.html">Residential</a>
+                <a href="repair.html">Repair & Maintenance</a>
+                <a href="consultation.html">Consultation</a>
+            </div>
+            <div class="footer-section">
+                <h4>Start Your Project</h4>
+                <p>Ready to transform your space?</p>
+                <p>Get in touch for a consultation.</p>
+                <a href="contact.html" class="btn-blue">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Get filter value
+                    const filterValue = this.textContent.toLowerCase();
+                    
+                    // Show/hide projects based on filter
+                    projectCards.forEach(card => {
+                        if (filterValue === 'all projects') {
+                            card.style.display = 'block';
+                        } else {
+                            const category = card.getAttribute('data-category');
+                            if (category && category.includes(filterValue)) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

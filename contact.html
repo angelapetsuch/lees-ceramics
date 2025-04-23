@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Lee's Ceramics Inc.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="nav-container secondary">
+        <a href="index.html" class="logo">
+            <img src="images/logo.svg" alt="Lee's Ceramics" width="100" height="100" />
+        </a>
+        <ul class="nav-menu">
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="commercial.html" class="nav-link">Commercial</a></li>
+            <li><a href="showcase.html" class="nav-link">Showcase</a></li>
+            <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            <li><a href="https://instagram.com" class="social-icon" target="_blank" aria-label="Visit our Instagram"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+    </nav>
+
+    <section class="contact-section">
+        <div class="container">
+            <h1 class="hero-title">Get in Touch</h1>
+            <p class="hero-subtitle">We're here to help bring your vision to life</p>
+
+            <div class="contact-grid">
+
+                <!-- Left Side: Contact Form -->
+                <div class="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="residential">Residential Installation</option>
+                                <option value="commercial">Commercial Installation</option>
+                                <option value="repair">Repair & Maintenance</option>
+                                <option value="consultation">Design Consultation</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-solid">Send Message</button>
+                    </form>
+                </div>
+                <!-- Right Side: Contact Info -->
+                <div class="contact-info-section">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Edina, MN 55439</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <p><strong>HOURS:</strong><br>MON-FRI: 8:00AM - 4:00PM</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>(952) 460-3707</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>leesceramicsinc@outlook.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info-footer">
+                <a href="/" class="logo-footer">
+                    <img src="images/logo.svg" alt="Lee's Ceramics" width="100" height="100" />
+                </a>
+                <h3>Get In Touch</h3>
+                <p><i class="fas fa-phone"></i><a href="tel:9524603707" class="contact-phone"> (952) 460-3707</a></p>
+                <p><i class="fas fa-envelope"></i><a href="mailto:leesceramicsinc@outlook.com" class="contact-phone"> leesceramicsinc@outlook.com</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> Edina, Minnesota</p>
+                <div class="social-icons-large">
+                    <a href="https://instagram.com" class="social-icon-large" target="_blank" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <a href="commercial.html">Commercial Tile</a>
+                <a href="residential.html">Residential</a>
+                <a href="repair.html">Repair & Maintenance</a>
+                <a href="consultation.html">Consultation</a>
+            </div>
+            <div class="footer-section">
+                <h4>Start Your Project</h4>
+                <p>Ready to transform your space?</p>
+                <p>Get in touch for a consultation.</p>
+                <a href="contact.html" class="btn-blue">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+      
+    
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message. We will get back to you soon!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
