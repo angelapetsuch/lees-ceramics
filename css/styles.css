@@ -478,9 +478,14 @@ footer {
 
 /* Services Grid */
 .services-section {
-  padding: 2rem 0 5rem; /* Reduced top padding */
+  padding: 2rem 0 5rem; /* Original padding for index page */
   background: var(--gray-100);
   margin-top: 0;
+}
+
+/* Target only standalone services and commercial pages */
+.nav-container.secondary + .main .services-section {
+  padding-top: 6rem; /* Increased top padding for standalone pages */
 }
 
 .services-section .hero-title {
