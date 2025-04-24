@@ -485,7 +485,7 @@ footer {
 
 /* Target only standalone services and commercial pages */
 .nav-container.secondary + .main .services-section {
-  padding-top: 6rem; /* Increased top padding for standalone pages */
+  padding-top: 12rem; /* Increased top padding for standalone pages */
 }
 
 .services-section .hero-title {
